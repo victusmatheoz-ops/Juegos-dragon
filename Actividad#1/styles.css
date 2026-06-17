@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#game {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+    background-image: url("IMG/parallax.png");
+    background-size: cover; /* adapta la imagen */
+    image-rendering: pixelated;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#mario {
+    width: 81px;
+    height: 123px;
+    background-image: url("IMG/Sprite1.png");
+background-size: 81px 123px;
+
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+
+    position: absolute;
+    bottom: 0;
+    left: 100px;
+}
+
+#bloque {
+    width: 60px;
+    height: 60px;
+    background: yellow;
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* Pájaro volando */
+#pajaro-volando {
+    width: 102px;
+    height: 123px;
+    background-image: url("IMG/pajaro1.png");
+    background-size: cover;
+    image-rendering: pixelated;
+
+    position: absolute;
+    top: 120px;
+    left: 500px;
+
+    animation: vuelo 2s infinite alternate ease-in-out;
+}
+
+/* Pájaro en el piso */
+#pajaro-piso {
+    width: 87px;
+    height: 81px;
+    background-image: url("IMG/pajaro2.png");
+    background-size: cover;
+    image-rendering: pixelated;
+
+    position: absolute;
+    bottom: 20px; /* casi al nivel de Mario */
+    left: 700px;
+}
+
+/* Animación de vuelo */
+@keyframes vuelo {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-30px);
+    }
+}
